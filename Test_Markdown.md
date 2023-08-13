@@ -1,5 +1,7 @@
 <details>
-<summary>Write question</summary>
+<summary>
+Write question
+</summary>
 
 ```python
 print("hello world!")

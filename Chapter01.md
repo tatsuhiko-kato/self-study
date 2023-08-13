@@ -4,19 +4,24 @@
 ### 1.1.1 導入方法
 ### 1.1.2 基本的な使い方
 <details>
-<summary>パッケージのインストール ※sampleprojectをインストール </summary> 
+<summary>
+パッケージのインストール ※sampleprojectをインストール 
+</summary> 
   
 ```python
 pip install sampleproject
 ```
 </details>
 
-<details><summary>
-バージョンを指定したパッケージのインストール
+<details>
+<summary>
+バージョンを指定したパッケージのインストール 
 ※バージョン1.2.0をインストール
-</summary><div>
+</summary>
+```python
 pip install sampleproject==1.2.0
-</div></details>
+```
+</details>
 
 <details><summary>
 バージョン範囲を指定したパッケージのインストール
