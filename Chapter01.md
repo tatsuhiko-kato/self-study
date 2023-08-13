@@ -90,64 +90,100 @@ pip uninstall sampleproject
 </details>
 
 ### 1.1.3 requirements.txtを作って、複数の環境でバージョンを統一する
-<details><summary>
+<details>
+<summary>
 requirements.txtの作成
-</summary><div>
-pip freeze > requirements.txt
-</div></details>
+</summary>
 
-<details><summary>
+```python
+pip freeze > requirements.txt
+```
+</details>
+
+<details>
+<summary>
 requirements.txtを参照してパッケージをインストール
-</summary><div>
+</summary>
+
+```python
 pip install -r requirements.txt
-</div></details>
+```
+</details>
 
 ## 1.2 仮想環境を作成する
 ### 1.2.2 基本的な使い方
-<details><summary>
-仮想環境の作成
+<details>
+<summary>
+仮想環境の作成  
 ※envを作成
-</summary><div>
+</summary>
+
+```python
 python -m venv .env
-</div></details>
+```
+</details>
 
-<details><summary>
-仮想環境の作成
+<details>
+<summary>
+仮想環境の作成  
 ※envディレクトリの中身を確認する
-</summary><div>
+</summary>
+
+```python
 ls -l .env
-</div></details>
+```
+</details>
 
-<details><summary>
+<details>
+<summary>
 仮想環境の有効化
-</summary><div>
+</summary>
+
+```python
 .env\Scripts\Activate.ps1
-</div></details>
+```
+</details>
 
-<details><summary>
+<details>
+<summary>
 仮想環境のPythonバージョンの確認
-</summary><div>
+</summary>
+
+```python
 python -V
-</div></details>
+```
+</details>
 
-<details><summary>
-仮想環境上でpipを使用
+<details>
+<summary>
+仮想環境上でpipを使用  
 ※ pipを最新版にアップグレード
-</summary><div>
-pip install --upgrade pip
-</div></details>
+</summary>
 
-<details><summary>
-仮想環境上でpipを使用
+```python
+pip install --upgrade pip
+```
+</details>
+
+<details>
+<summary>
+仮想環境上でpipを使用  
 ※ pipを最新版にアップグレード
-</summary><div>
-pip install --upgrade pip
-</div></details>
+</summary>
 
-<details><summary>
-仮想環境上でpipを使用
+```python
+pip install --upgrade pip
+```
+</details>
+
+<details>
+<summary>
+仮想環境上でpipを使用  
 ※ Django==3.2.4をインストール
-</summary><div>
-pip install Django==3.2.4
+</summary>
 
-</div></details>
+```python
+pip install Django==3.2.4
+```
+
+</details>
