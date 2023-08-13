@@ -23,12 +23,16 @@ pip install sampleproject==1.2.0
 ```
 </details>
 
-<details><summary>
-バージョン範囲を指定したパッケージのインストール
+<details>
+<summary>
+バージョン範囲を指定したパッケージのインストール 
 ※1.2.0以上2.0.0未満のなかで最新のバージョンをインストール
-</summary><div>
+</summary>
+
+```python
 pip install "sampleproject>=1.2.0<2.0.0"
-</div></details>
+```
+</details>
 
 <details><summary>
 パッケージのアップグレード
