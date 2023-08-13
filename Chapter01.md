@@ -5,7 +5,8 @@
 ### 1.1.2 基本的な使い方
 <details>
 <summary>
-パッケージのインストール ※sampleprojectをインストール 
+パッケージのインストール  
+※sampleprojectをインストール 
 </summary> 
   
 ```python
@@ -15,7 +16,8 @@ pip install sampleproject
 
 <details>
 <summary>
-バージョンを指定したパッケージのインストール ※バージョン1.2.0をインストール
+バージョンを指定したパッケージのインストール  
+※バージョン1.2.0をインストール
 </summary>
 
 ```python
@@ -25,7 +27,7 @@ pip install sampleproject==1.2.0
 
 <details>
 <summary>
-バージョン範囲を指定したパッケージのインストール 
+バージョン範囲を指定したパッケージのインストール  
 ※1.2.0以上2.0.0未満のなかで最新のバージョンをインストール
 </summary>
 
@@ -34,38 +36,58 @@ pip install "sampleproject>=1.2.0<2.0.0"
 ```
 </details>
 
-<details><summary>
-パッケージのアップグレード
+<details>
+<summary>
+パッケージのアップグレード  
 ※最新バージョンにアップグレード
-</summary><div>
+</summary>
+
+```python
 pip install --upgrade sampleproject
-</div></details>
+```
+</details>
 
-<details><summary>
-パッケージのダウングレード
+<details>
+<summary>
+パッケージのダウングレード  
 ※バージョン1.2.0にダウングレード
-</summary><div>
+</summary>
+
+```python
 pip install --upgrade sampleproject==1.2.0
-</div></details>
+```
+</details>
 
-<details><summary>
+<details>
+<summary>
 インストールされているパッケージとバージョンの確認
-</summary><div>
+</summary>
+
+```python
 pip list
-</div></details>
+```
+</details>
 
-<details><summary>
+<details>
+<summary>
 最新版でないパッケージのみ表示
-</summary><div>
-pip list --outdated
-</div></details>
+</summary>
 
-<details><summary>
-パッケージのアンインストール
+```python
+pip list --outdated
+```
+</details>
+
+<details>
+<summary>
+パッケージのアンインストール  
 ※sampleprojectをアンインストール
-</summary><div>
+</summary>
+
+```python
 pip uninstall sampleproject
-</div></details>
+```
+</details>
 
 ### 1.1.3 requirements.txtを作って、複数の環境でバージョンを統一する
 <details><summary>
