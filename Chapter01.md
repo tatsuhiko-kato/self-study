@@ -3,12 +3,13 @@
 ## 1.1 Pythonパッケージを管理する
 ### 1.1.1 導入方法
 ### 1.1.2 基本的な使い方
-<details><summary>
-パッケージのインストール
+<details>
+<summary>パッケージのインストール</summary>
 ※sampleprojectをインストール  
-</summary><div>
+```python
 pip install sampleproject
-</div></details>
+```
+</details>
 
 <details><summary>
 バージョンを指定したパッケージのインストール
