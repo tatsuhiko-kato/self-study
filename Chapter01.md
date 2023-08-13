@@ -4,8 +4,8 @@
 ### 1.1.1 導入方法
 ### 1.1.2 基本的な使い方
 <details>
-<summary>パッケージのインストール</summary>
-※sampleprojectをインストール  
+<summary>パッケージのインストール ※sampleprojectをインストール </summary> 
+  
 ```python
 pip install sampleproject
 ```
