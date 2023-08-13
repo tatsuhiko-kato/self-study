@@ -6,8 +6,10 @@
 <details><summary>
 インデント
 </summary><div>
+```
 丸カッコの先頭に揃えるパターン
 先頭の値を縦で揃え、定義の始めの位置に閉じカッコを揃えるパターン
+```
 </div></details>
 
 <details><summary>
