@@ -14,7 +14,7 @@ num = 0 / 10
 
 <details>
 <summary>
-try-except ※ ZeroDivisionErrorのハンドリング 
+try-except ※ZeroDivisionErrorのハンドリング 
 </summary>
 
 ```python
