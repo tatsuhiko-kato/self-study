@@ -151,7 +151,7 @@ class MyMaxError(MyValidationError):
     '''MyMaxError
     '''
     title = 'Max error'
-    detail = 'Max値 100までの値を入力してください'
+    detail = 'Max100までの値を入力してください'
 
 
 def validate_number(num):
