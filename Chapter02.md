@@ -11,6 +11,7 @@
 ```python
 # 丸カッコの先頭に揃えるパターン  
 # 先頭の値を縦で揃え、定義の始めの位置に閉じカッコを揃えるパターン
+```
 </details>
 
 
@@ -67,8 +68,11 @@ import
 <summary>
 インラインコメント
 </summary>
-コードとコメントの間は２つ以上のスペースを書く
-コメント自体は、１つの#と１つのスペースの後ろに書く
+
+```python
+# コードとコメントの間は２つ以上のスペースを書く
+# コメント自体は、１つの#と１つのスペースの後ろに書く
+```
 </div></details>
 
 <details>
@@ -100,7 +104,7 @@ docstring
 </summary>
 
 ```python
-CamelCase
+# CamelCase
 ```
 </details>
 
@@ -120,7 +124,7 @@ lowercase または lower_case_with_underscores
 </summary>
 
 ```python
-UPPERCASE または UPPER_CASE_WITH_UNDERSCORES
+# UPPERCASE または UPPER_CASE_WITH_UNDERSCORES
 ```
 </details>
 
@@ -130,6 +134,6 @@ UPPERCASE または UPPER_CASE_WITH_UNDERSCORES
 </summary>
 
 ```python
-UPPERCASE または UPPER_CASE_WITH_UNDERSCORES
+# UPPERCASE または UPPER_CASE_WITH_UNDERSCORES
 ```
 </details>
