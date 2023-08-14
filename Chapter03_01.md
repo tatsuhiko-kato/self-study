@@ -24,7 +24,7 @@ try:
 except ZeroDivisionError:
     print('0で割ることはできません')
 ```
-</div>
+</details>
 
 <details>
 <summary>
