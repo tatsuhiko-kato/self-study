@@ -195,17 +195,192 @@ test
 
 ## 10.3 インタープリターに関わる情報を取得、操作する
 ### 10.3.1 コマンドライン引数を取得する
+
+```python
+# コマンドライン引数を出力するexample.pyファイル
+```
+
+<details><summary>サンプルコード</summary>
+
+```python
+import sys
+print(sys.argv)
+
+$ python 10_03_01_example.py -a abc
+['example.py', '-a', 'abc']
+```
+
+</details>
+
 ### 10.3.2 ライブラリのインポートパスを操作する
+
+```python
+# インポート対象のモジュールやパッケージを探索する先となるファイルパスを出力
+```
+
+<details><summary>サンプルコード</summary>
+
+```python
+>>> import pprint, sys
+>>> pprint.pprint(sys.path)
+['',
+ '/opt/python/3.10.8/lib/python310.zip',
+ '/opt/python/3.10.8/lib/python3.10',
+ '/opt/python/3.10.8/lib/python3.10/lib-dynload',
+ '/home/codespace/.local/lib/python3.10/site-packages',
+ '/opt/python/3.10.8/lib/python3.10/site-packages']
+```
+
+</details>
+
 ### 10.3.3 プログラムを終了する
+
+```python
+# 「プログラムを終了します」と表示させてpythonスクリプトを終了する
+```
+
+<details><summary>サンプルコード</summary>
+
+```python
+import sys
+sys.exit('プログラムを終了します')
+
+$ python 10_03_03_exit.py
+プログラムを終了します
+```
+
+</details>
+
 ### 10.3.4 コンソールの入出力を扱う
+
+```python
+# 10_04_01_repeat.py
+# 'standard output message\n'を標準出力
+# 'standard error message\n'を標準エラー出力
+```
+
+<details><summary>sample code</summary>
+
+```python
+# 'standard output message\n'を標準出力
+$ sys.stdout.write('standard output message\n')
+
+# 'standard error message\n'を標準エラー出力
+$ sys.stderr.write('standard error message\n')
+
+# 標準入力オブジェクトに'standard input message'を渡して改行
+$ sys.stdin.read()
+
+```
+
+</details>
+
 ### 10.3.5 breakpoint()実行時のフック関数
+
+```python
+# print_hello関数をbreakpointhookに設定
+```
+
+<details><summary>sample code</summary>
+
+```python
+import sys
+
+def print_hello():
+    print('Hello!')
+
+
+sys.breakpointhook = print_hello
+
+
+if __name__ == '__main__':
+    print('start')
+    breakpoint()
+    print('end')
+```
+
+</details>
+
 ### 10.3.6 Pythonのバージョン番号を調べる
+
+```python
+# pythonのバージョン情報を出力
+```
+
+<details><summary>sample code</summary>
+
+```python
+# pythonのバージョン情報を出力
+>>> import sys
+>>> sys.version_info
+sys.version_info(major=3, minor=10, micro=8, releaselevel='final', serial=0)
+```
+
+</details>
+
 ### 10.3.7 sys：よくある使い方
 ### 10.3.8 sys：ちょっと役立つ周辺知識
 ### 10.3.9 sys：よくあるエラーと対処法
 
 ## 10.4 コマンドラインオプション、引数を扱う
 ### 10.4.1 コマンドラインオプションを扱う
+
+```python
+import argparse
+# パーサーのインスタンスを作成
+# 文字列を受け取る-sオプションを定義
+# 数値を受け取る-nオプションを定義
+# 引数をパースし、得られた値を変数に格納する
+# パースによって得られた値を扱う
+# 引数なしで上記スクリプトを実行
+# ヘルプを表示
+# -sにhoge, -nに3を渡す
+```
+<details><summary>sample code</summary>
+
+```python
+import argparse
+
+# パーサーのインスタンスを作成
+parser = argparse.ArgumentParser(description='Example command')
+
+# 文字列を受け取る-sオプションを定義
+parser.add_argument('-s', '--string', type=str, help='string to dispay', required=True)
+
+# 数値を受け取る-nオプションを定義
+parser.add_argument('-n', '--num', type=int, help='number of items repeatedly display the string', default=2)
+
+# 引数をパースし、得られた値を変数に格納する
+args = parser.parse_args()
+
+# パースによって得られた値を扱う
+print(args.string * args.num)
+
+# 引数なしで上記スクリプトを実行
+$ python 10_04_01_repeat.py
+usage: 10_04_01_repeat.py [-h] -s STRING [-n NUM]
+10_04_01_repeat.py: error: the following arguments are required: -s/--string
+
+# ヘルプを表示
+$ python 10_04_01_repeat.py -h
+usage: 10_04_01_repeat.py [-h] -s STRING [-n NUM]
+
+Example command
+
+options:
+  -h, --help            show this help message and exit
+  -s STRING, --string STRING
+                        string to dispay
+  -n NUM, --num NUM     number of items repeatedly display the string
+
+# -sにhoge, -nに3を渡す
+$ python 10_04_01_repeat.py -s hoge -n 3
+hogehogehoge
+
+```
+
+</details>
+
 ### 10.4.2 argparse：よくある使い方
 ### 10.4.3 argparse：ちょっと役立つ周辺知識
 ### 10.4.4 argparse：よくあるエラーと対処法
